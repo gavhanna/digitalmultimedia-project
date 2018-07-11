@@ -11,8 +11,19 @@ main {
 }
 
 nav {
-  background: #b61924;
+  background: rgba(51, 51, 51, 0.7);
   box-shadow: none;
+}
+
+.change {
+  background: rgba(226, 226, 226, 0.7);
+  .nav-wrapper {
+    color: #333;
+  }
+}
+
+.navbar-fixed {
+  position: fixed;
 }
 
 .section {
@@ -27,12 +38,16 @@ nav {
 }
 
 .section1 {
-  min-height: calc(100vh - 64px); //background: #333;
+  min-height: 100vh; //background: #333;
   color: white;
 }
 
 .section2 {
   position: relative;
+}
+
+.page-footer {
+  background: #333;
 }
 
 canvas {
