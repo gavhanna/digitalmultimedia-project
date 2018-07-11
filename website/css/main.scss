@@ -10,6 +10,11 @@ main {
   flex: 1 0 auto;
 }
 
+nav {
+  background: #b61924;
+  box-shadow: none;
+}
+
 .section {
   min-height: 100vh;
   display: flex;
@@ -23,38 +28,34 @@ main {
 
 .section1 {
   min-height: calc(100vh - 64px); //background: #333;
-  background-attachment: local;
-  background-size: cover;
   color: white;
 }
 
 .section2 {
-  background: lightblue;
+  position: relative;
 }
 
-/* The only rule that matters */
-
-#video-background {
-  /*  making the video fullscreen  */
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
+canvas {
+  display: block;
+  vertical-align: bottom;
 }
 
-/* These just style the content */
+/* ---- particles.js container ---- */
 
-article {
-  /*  just a fancy border  */
+#particles-js,
+#particles-js2 {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 10px solid rgba(255, 255, 255, 0.5);
-  margin: 10px;
+  width: 100%;
+  background-color: #333;
+  height: 100%; //background-color: #b61924;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -10;
+}
+
+#particles-js2 {
+  //background: rgb(65, 180, 218);
+  background: white;
 }
