@@ -47,6 +47,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  pointer-events: none;
 }
 
 .section h1,
@@ -75,6 +76,7 @@ canvas {
 /* ---- particles.js container ---- */
 #particles-js,
 #particles-js2 {
+  pointer-events: all;
   position: absolute;
   width: 100%;
   background-color: #333;
