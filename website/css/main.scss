@@ -11,12 +11,12 @@ main {
 }
 
 nav {
-  background: rgba(51, 51, 51, 0.7);
+  background: rgba(51, 51, 51, 0);
   box-shadow: none;
 }
 
 .change {
-  background: rgba(226, 226, 226, 0.7);
+  background: rgba(226, 226, 226, 0);
   .nav-wrapper {
     color: #333;
   }
@@ -40,7 +40,17 @@ nav {
 
 .section1 {
   min-height: 100vh; //background: #333;
-  color: white;
+  color: #000; //background: #333;
+  background-image: url("../img/light3.jpg");
+  background-size: cover;
+  h1 {
+    font-size: 8rem;
+    font-family: "Megrim";
+  }
+  p {
+    font-size: 2rem;
+    color: #111;
+  }
 }
 
 .section2 {
@@ -62,17 +72,15 @@ canvas {
 #particles-js2 {
   pointer-events: all;
   position: absolute;
-  width: 100%;
-  background-color: #333;
+  width: 100%; //background-color: #333;
   height: 100%; //background-color: #b61924;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
-  z-index: -10;
+  background-position: 50% 50%; //z-index: -10;
 }
 
 #particles-js2 {
   //background: rgb(65, 180, 218);
-  background: white;
+  //background: white;
 }
