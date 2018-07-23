@@ -9,6 +9,7 @@ body {
           flex-direction: column;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
+  background: #000;
 }
 
 main {
@@ -18,13 +19,14 @@ main {
 }
 
 nav {
-  background: rgba(51, 51, 51, 0.7);
+  background: rgba(51, 51, 51, 0);
   -webkit-box-shadow: none;
           box-shadow: none;
+  margin: 0 auto;
 }
 
 .change {
-  background: rgba(226, 226, 226, 0.7);
+  background: rgba(226, 226, 226, 0);
 }
 
 .change .nav-wrapper {
@@ -33,6 +35,11 @@ nav {
 
 .navbar-fixed {
   position: fixed;
+}
+
+.nav-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .section {
@@ -57,11 +64,62 @@ nav {
 
 .section1 {
   min-height: 100vh;
-  color: white;
+  color: #000;
+  background-image: url("../img/bg1.jpg");
+  background-size: cover;
+  color: black;
+}
+
+.title-content {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 500px;
+  height: 500px;
+  background: #fe9627a6;
+  border-radius: 50%;
+}
+
+.title-content h1 {
+  font-size: 8rem;
+  font-family: "Megrim";
+  -webkit-text-fill-color: #111;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #111;
+}
+
+.title-content p {
+  font-size: 2rem;
+  color: #111;
+}
+
+@media screen and (max-width: 550px) {
+  .title-content {
+    width: 300px;
+    height: 300px;
+  }
+  .title-content h1 {
+    font-size: 5rem;
+  }
+  .title-content p {
+    font-size: 1.5rem;
+  }
 }
 
 .section2 {
   position: relative;
+  background-color: #013A6B;
+  color: white;
+  background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
 }
 
 .page-footer {
@@ -79,16 +137,10 @@ canvas {
   pointer-events: all;
   position: absolute;
   width: 100%;
-  background-color: #333;
   height: 100%;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  z-index: -10;
-}
-
-#particles-js2 {
-  background: white;
 }
 /*# sourceMappingURL=main.css.map */
