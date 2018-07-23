@@ -9,6 +9,7 @@ body {
           flex-direction: column;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
+  background: #000;
 }
 
 main {
@@ -21,6 +22,7 @@ nav {
   background: rgba(51, 51, 51, 0);
   -webkit-box-shadow: none;
           box-shadow: none;
+  margin: 0 auto;
 }
 
 .change {
@@ -33,6 +35,11 @@ nav {
 
 .navbar-fixed {
   position: fixed;
+}
+
+.nav-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .section {
@@ -58,22 +65,61 @@ nav {
 .section1 {
   min-height: 100vh;
   color: #000;
-  background-image: url("../img/light3.jpg");
+  background-image: url("../img/bg1.jpg");
   background-size: cover;
+  color: black;
 }
 
-.section1 h1 {
+.title-content {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 500px;
+  height: 500px;
+  background: #fe9627a6;
+  border-radius: 50%;
+}
+
+.title-content h1 {
   font-size: 8rem;
   font-family: "Megrim";
+  -webkit-text-fill-color: #111;
+  /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #111;
 }
 
-.section1 p {
+.title-content p {
   font-size: 2rem;
   color: #111;
 }
 
+@media screen and (max-width: 550px) {
+  .title-content {
+    width: 300px;
+    height: 300px;
+  }
+  .title-content h1 {
+    font-size: 5rem;
+  }
+  .title-content p {
+    font-size: 1.5rem;
+  }
+}
+
 .section2 {
   position: relative;
+  background-color: #013A6B;
+  color: white;
+  background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
 }
 
 .page-footer {
