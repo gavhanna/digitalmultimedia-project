@@ -37,8 +37,7 @@ nav {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  pointer-events: none;
+  justify-content: center; //pointer-events: none;
   h1,
   p {
     margin: 0 auto;
@@ -96,8 +95,14 @@ nav {
   background-image: -webkit-linear-gradient(30deg, #013A6B 50%, #004E95 50%);
 }
 
+.section3 {
+  background: #333;
+  background-image: -webkit-linear-gradient(-30deg, #333 50%, #555 50%);
+}
+
 .page-footer {
   background: #333;
+  background-image: -webkit-linear-gradient(0deg, #333 50%, #555 50%);
 }
 
 canvas {
@@ -122,4 +127,16 @@ canvas {
 #particles-js2 {
   //background: rgb(65, 180, 218);
   //background: white;
+}
+
+// video
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  iframe {
+    max-width: 100vw;
+    max-height: 100vh; // width: 100%;// height: auto;
+    //margin: 0 auto;
+  }
 }

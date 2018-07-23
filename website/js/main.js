@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", event => {
   particlesJS.load('particles-js2', 'assets/particles2.json', function () {
     console.log('callback - particles.js config loaded');
   });
+
+  // Initialise materliaze mobile nav
+  $('.sidenav').sidenav();
 });
 
 
