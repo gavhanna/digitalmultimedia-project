@@ -101,19 +101,6 @@ nav {
   color: #111;
 }
 
-@media screen and (max-width: 550px) {
-  .title-content {
-    width: 300px;
-    height: 300px;
-  }
-  .title-content h1 {
-    font-size: 5rem;
-  }
-  .title-content p {
-    font-size: 1.5rem;
-  }
-}
-
 .section2 {
   position: relative;
   background-color: rgba(1, 58, 107, 0.432);
@@ -282,14 +269,16 @@ nav {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .action-blurb .action {
   opacity: 0;
   font-size: 3rem;
   padding: 0 10px;
+  margin: 0 10px;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   -webkit-transform: scale(0.2);
@@ -366,5 +355,41 @@ canvas {
 
 #particles-js2 {
   z-index: -1;
+}
+
+@media screen and (max-width: 550px) {
+  .title-content {
+    width: 300px;
+    height: 300px;
+  }
+  .title-content h1 {
+    font-size: 5rem;
+  }
+  .title-content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .section3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .section3 iframe {
+    margin: 0 auto;
+  }
+  .box {
+    width: 100%;
+  }
+  .section3-text-container {
+    width: 100% !important;
+    text-align: center;
+  }
+  .section3-video-container {
+    width: 100% !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
