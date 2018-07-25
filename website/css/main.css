@@ -236,8 +236,9 @@ nav {
           flex-direction: row;
 }
 
-.section3 h3 {
+.section3 h2 {
   font-family: "Megrim";
+  font-size: 4rem;
 }
 
 .section3 .section3-text-container {
