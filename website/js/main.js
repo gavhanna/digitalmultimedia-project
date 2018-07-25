@@ -10,47 +10,59 @@ document.addEventListener("DOMContentLoaded", event => {
 
   // Initialise materliaze mobile nav
   $('.sidenav').sidenav();
+
+  // Smooth scrolling
+  $('a[href*="#"]')
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function (event) {
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top - 50
+          }, 1000, function () {
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
+
+  function isScrolledIntoView(elem) {
+    const docViewTop = $(window).scrollTop();
+    const docViewBottom = docViewTop + $(window).height();
+
+    const elemTop = $(elem).offset().top;
+    const elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+
+  $(window).scroll(function () {
+    let timer = 0;
+    $('.action').each(function () {
+      if (isScrolledIntoView(this) === true) {
+        setTimeout(() => {
+
+          $(this).addClass('in-view');
+        }, timer);
+      }
+      timer += 1000;
+    });
+  });
 });
 
-
-
-// Smooth scrolling
-$('a[href*="#"]')
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function (event) {
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-      &&
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top - 50
-        }, 1000, function () {
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
-
-function isScrolledIntoView(elem) {
-  var docViewTop = $(window).scrollTop();
-  var docViewBottom = docViewTop + $(window).height();
-
-  var elemTop = $(elem).offset().top;
-  var elemBottom = elemTop + $(elem).height();
-
-  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
 

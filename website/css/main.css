@@ -227,6 +227,117 @@ nav {
 .section3 {
   background: #333;
   background-image: -webkit-linear-gradient(-30deg, #333 50%, #555 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.section3 h3 {
+  font-family: "Megrim";
+}
+
+.section3 .section3-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  text-align: center;
+  color: white;
+}
+
+.section3 .section3-video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+
+.section3 .section3-video-container iframe {
+  margin: 0 auto;
+}
+
+.action-blurb {
+  font-family: "Megrim";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.action-blurb .action {
+  opacity: 0;
+  font-size: 3rem;
+  padding: 0 10px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
+}
+
+.in-view {
+  -webkit-animation-name: "in-view" !important;
+          animation-name: "in-view" !important;
+  -webkit-animation-direction: forwards;
+          animation-direction: forwards;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes in-view {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1.1) rotate(2deg);
+            transform: scale(1.1) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes in-view {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1.1) rotate(2deg);
+            transform: scale(1.1) rotate(2deg);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .page-footer {
