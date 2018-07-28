@@ -330,6 +330,96 @@ nav {
   }
 }
 
+.section4 {
+  background: #333;
+  background-image: -webkit-linear-gradient(30deg, #333 50%, #555 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.section4 h2 {
+  font-family: "Megrim";
+  font-size: 4rem;
+}
+
+.section4 .section3-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  text-align: center;
+  color: white;
+}
+
+.section4 .section4-image-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+
+.section4 .section4-image-container img {
+  margin: 0 auto;
+  height: auto;
+  width: 300px;
+}
+
+.inphone-logo {
+  position: absolute;
+  font-size: 7rem;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  text-align: center;
+  color: #ffff6a;
+}
+
+.inphone-logo i {
+  margin: 0 auto;
+}
+
+.specs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.specs .spec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+}
+
 .page-footer {
   background: #333;
   background-image: -webkit-linear-gradient(0deg, #333 50%, #555 50%);
@@ -371,14 +461,16 @@ canvas {
 }
 
 @media screen and (max-width: 1150px) {
-  .section3 {
+  .section3,
+  .section4 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
   }
-  .section3 iframe {
+  .section3 iframe,
+  .section4 iframe {
     margin: 0 auto;
   }
   .box {
@@ -390,6 +482,9 @@ canvas {
   }
   .section3-video-container {
     width: 100% !important;
+  }
+  .section4-image-container {
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=main.css.map */
