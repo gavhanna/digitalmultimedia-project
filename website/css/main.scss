@@ -124,7 +124,7 @@ nav {
   transition: all .2s ease-in-out;
   .content-img {
     height: calc(1/3);
-    background: rgb(2, 36, 65);
+    background: rgb(230, 46, 0);
     padding-top: 20px;
     transform: translateY(125px);
     opacity: 0;
@@ -136,7 +136,7 @@ nav {
   }
   .content-text {
     height: 200px;
-    background: rgb(2, 36, 65);
+    background: rgb(214, 43, 0);
     padding: 10px;
     transform: translateY(-125px);
     opacity: 0;
@@ -149,7 +149,7 @@ nav {
   }
   .content-title {
     height: calc(1/3);
-    background: rgb(2, 36, 65);
+    background: rgb(218, 44, 0);
     font-size: 1rem;
     font-family: "Megrim";
     z-index: 2;
@@ -323,6 +323,10 @@ canvas {
 
 .footer-copyright i {
   margin: 0 10px;
+}
+
+#love {
+  color: rgb(204, 36, 36);
 }
 
 // Other Stuff
