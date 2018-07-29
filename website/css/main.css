@@ -430,6 +430,10 @@ canvas {
   vertical-align: bottom;
 }
 
+.footer-copyright i {
+  margin: 0 10px;
+}
+
 /* ---- particles.js container ---- */
 #particles-js,
 #particles-js2 {
