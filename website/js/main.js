@@ -63,6 +63,22 @@ document.addEventListener("DOMContentLoaded", event => {
       timer += 1000;
     });
   });
+
+  // Add class to nav after 100vh scroll
+  const $nav = $('nav');
+  const $win = $(window);
+  const winH = $win.height(); // Get the window height.
+
+  $win.on("scroll", function () {
+    if ($(this).scrollTop() > winH) {
+      console.log("scrolling");
+      $nav.addClass("bg");
+    } else {
+      $nav.removeClass("bg");
+    }
+  }).on("resize", function () { // If the user resizes the window
+    winH = $(this).height(); // you'll need the new height value
+  });
 });
 
 
