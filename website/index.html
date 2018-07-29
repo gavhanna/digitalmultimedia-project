@@ -19,8 +19,8 @@
   <div class="navbar-fixed">
     <nav id="nav">
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">
-          <i class="fas fa-fire"></i>
+        <a href="#section1" class="brand-logo">
+          <img src="img/ember-logo.png" alt="">
         </a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">
@@ -138,15 +138,35 @@
         </div>
       </div>
       <div class="section3-video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mjQKxaHuYFo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media"
-          allowfullscreen></iframe>
+        <style>
+          .embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+          }
+
+          .embed-container iframe,
+          .embed-container object,
+          .embed-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        </style>
+        <div class='embed-container'>
+          <iframe src='https://www.youtube.com/embed/mjQKxaHuYFo' frameborder='0' allowfullscreen></iframe>
+        </div>
       </div>
     </div>
 
     <!-- Section 4 -->
     <div class="section section4" id="section4">
       <div class="section4-image-container">
-        <img src="img/ph.png" alt="">
+        <img id="phone-png" src="img/ph.png" alt="">
         <span class="inphone-logo">
           <img id="inphone-ember" src="img/ember-logo.png" alt="">
         </span>
@@ -156,23 +176,28 @@
           <h2>Specifications</h2>
           <div class="specs">
             <div class="spec">
-              <span class="spectitle">Camera</span>
+              <span class="spectitle">
+                <i class="fas fa-camera-retro"></i> Camera</span>
               <span class="specdata">12mp EmberEye</span>
             </div>
             <div class="spec">
-              <span class="spectitle">Video</span>
+              <span class="spectitle">
+                <i class="fas fa-video"></i> Video</span>
               <span class="specdata">4k @ 60fps</span>
             </div>
             <div class="spec">
-              <span class="spectitle">CPU</span>
+              <span class="spectitle">
+                <i class="fas fa-microchip"></i> CPU</span>
               <span class="specdata">16-core AshDragon Processor</span>
             </div>
             <div class="spec">
-              <span class="spectitle">Battery</span>
+              <span class="spectitle">
+                <i class="fas fa-battery-three-quarters"></i> Battery</span>
               <span class="specdata">18hr Talktime. 40hr standby. </span>
             </div>
             <div class="spec">
-              <span class="spectitle">A.I.</span>
+              <span class="spectitle">
+                <i class="fas fa-heart"></i> A.I.</span>
               <span class="specdata">Ra, Personal Assistant</span>
             </div>
           </div>
@@ -190,7 +215,8 @@
           <p class="grey-text text-lighten-4">Ember</p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Developed by</h5>
+          <h5 class="white-text">Developed with
+            <i class="fas fa-heart"></i> by</h5>
           <ul>
             <li>
               Arkadiusz Salek

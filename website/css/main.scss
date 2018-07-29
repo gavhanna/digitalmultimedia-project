@@ -44,6 +44,12 @@ nav {
   line-height: 50px !important;
 }
 
+.brand-logo>img {
+  height: 40px;
+  width: auto;
+  margin-top: 5px;
+}
+
 .section {
   min-height: 100vh;
   display: flex;
@@ -72,6 +78,7 @@ nav {
   height: 500px;
   background: #fe9627a6;
   border-radius: 50%;
+  position: relative;
   h1 {
     font-size: 8rem;
     font-family: "Megrim";
@@ -161,7 +168,6 @@ nav {
     transform: translateY(0px);
     opacity: 1;
   }
-  .line {}
 }
 
 // Section 3
@@ -186,9 +192,9 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 50%; //margin: 0 10px;
     iframe {
-      margin: 0 auto;
+      // margin: 0 auto;
     }
   }
 }
@@ -253,7 +259,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    img {
+    #phone-png {
       margin: 0 auto;
       height: auto;
       width: 300px;
@@ -273,6 +279,22 @@ nav {
     height: 150px;
     width: auto;
     margin: 0 auto;
+  }
+}
+
+#inphone-ember {
+  animation-name: "ember-logo";
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ember-logo {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
   }
 }
 
@@ -333,6 +355,15 @@ canvas {
     p {
       font-size: 1.5rem;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #phone-png {
+    max-width: 100%;
+  }
+  .specs {
+    width: 95%;
   }
 }
 

@@ -54,6 +54,12 @@ nav {
   line-height: 50px !important;
 }
 
+.brand-logo > img {
+  height: 40px;
+  width: auto;
+  margin-top: 5px;
+}
+
 .section {
   min-height: 100vh;
   display: -webkit-box;
@@ -97,6 +103,7 @@ nav {
   height: 500px;
   background: #fe9627a6;
   border-radius: 50%;
+  position: relative;
 }
 
 .title-content h1 {
@@ -270,10 +277,6 @@ nav {
   width: 50%;
 }
 
-.section3 .section3-video-container iframe {
-  margin: 0 auto;
-}
-
 .action-blurb {
   font-family: "Megrim";
   display: -webkit-box;
@@ -390,7 +393,7 @@ nav {
   width: 50%;
 }
 
-.section4 .section4-image-container img {
+.section4 .section4-image-container #phone-png {
   margin: 0 auto;
   height: auto;
   width: 300px;
@@ -410,6 +413,39 @@ nav {
   height: 150px;
   width: auto;
   margin: 0 auto;
+}
+
+#inphone-ember {
+  -webkit-animation-name: "ember-logo";
+          animation-name: "ember-logo";
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes ember-logo {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes ember-logo {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
 }
 
 .specs {
@@ -475,6 +511,15 @@ canvas {
   }
   .title-content p {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #phone-png {
+    max-width: 100%;
+  }
+  .specs {
+    width: 95%;
   }
 }
 
