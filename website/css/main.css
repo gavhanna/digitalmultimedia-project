@@ -72,6 +72,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .section h1,
@@ -486,6 +487,29 @@ canvas {
 
 #love {
   color: #cc2424;
+}
+
+.downarrow {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  bottom: 0px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.downarrow a {
+  color: #333;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.downarrow a:hover {
+  color: #000;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* ---- particles.js container ---- */
